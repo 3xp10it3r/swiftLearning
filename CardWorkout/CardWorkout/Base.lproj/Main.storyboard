@@ -69,6 +69,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="rulesButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YiP-Uu-9b4"/>
+                                    <segue destination="AHe-VD-AlK" kind="presentation" id="yUL-9q-pMt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -94,7 +95,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58" y="-2"/>
+            <point key="canvasLocation" x="-583" y="-1"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YxO-R0-Rn8">
+            <objects>
+                <viewController id="AHe-VD-AlK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qqb-IP-tKd">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWR-UF-h0O">
+                                <rect key="frame" x="30" y="67" width="330" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The value of each card represents the number of exercise you do.  J = 11, Q = 12, K = 13, A = 14" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41v-pP-SPl">
+                                <rect key="frame" x="30" y="150" width="330" height="95.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="♠️ = Push-up  ❤️ = Sit-up  ♣️ = Burpees  ♦️ = Jumping Jacks" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYO-HX-iYH">
+                                <rect key="frame" x="95" y="320.66666666666669" width="200" height="184"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="p4d-th-1dr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kqi-bU-5Vi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="41v-pP-SPl" firstAttribute="centerX" secondItem="Qqb-IP-tKd" secondAttribute="centerX" id="EQK-8z-3ME"/>
+                            <constraint firstItem="41v-pP-SPl" firstAttribute="top" secondItem="cWR-UF-h0O" secondAttribute="bottom" constant="35" id="FPm-U6-Lsa"/>
+                            <constraint firstItem="kqi-bU-5Vi" firstAttribute="trailing" secondItem="41v-pP-SPl" secondAttribute="trailing" constant="30" id="JcR-55-tuH"/>
+                            <constraint firstItem="41v-pP-SPl" firstAttribute="leading" secondItem="kqi-bU-5Vi" secondAttribute="leading" constant="30" id="Mcm-rE-8wo"/>
+                            <constraint firstItem="cWR-UF-h0O" firstAttribute="leading" secondItem="kqi-bU-5Vi" secondAttribute="leading" constant="30" id="WzR-Ai-WSb"/>
+                            <constraint firstItem="iYO-HX-iYH" firstAttribute="top" secondItem="41v-pP-SPl" secondAttribute="bottom" constant="75" id="bHm-13-cWc"/>
+                            <constraint firstItem="cWR-UF-h0O" firstAttribute="centerX" secondItem="Qqb-IP-tKd" secondAttribute="centerX" id="h29-lY-AEE"/>
+                            <constraint firstItem="kqi-bU-5Vi" firstAttribute="trailing" secondItem="cWR-UF-h0O" secondAttribute="trailing" constant="30" id="qkR-hN-aUP"/>
+                            <constraint firstItem="cWR-UF-h0O" firstAttribute="top" secondItem="kqi-bU-5Vi" secondAttribute="top" constant="20" id="vtN-EO-bvl"/>
+                            <constraint firstItem="iYO-HX-iYH" firstAttribute="centerX" secondItem="Qqb-IP-tKd" secondAttribute="centerX" id="xJN-rS-4ty"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dgb-CA-7VE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="278" y="-1"/>
         </scene>
     </scenes>
     <resources>
