@@ -32,6 +32,15 @@ class CardSelectionViewController: UIViewController {
         cardImageView.image = cards.randomElement()
     }
     
+    @objc func stopButtonTapped(){
+        timer.invalidate()
+    }
+    
+    @objc func restartButtonTapped(){
+        timer.invalidate()
+        startTimer()
+    }
+    
     func configureUI(){
         configureCardImageViewUI()
         configureStopButton()
@@ -64,10 +73,6 @@ class CardSelectionViewController: UIViewController {
         ])
     }
     
-    @objc func stopButtonTapped(){
-        timer.invalidate()
-    }
-    
     func configureRestartButton(){
         view.addSubview(restartButton)
         restartButton.addTarget(self, action: #selector(restartButtonTapped), for: .touchUpInside)
@@ -79,11 +84,7 @@ class CardSelectionViewController: UIViewController {
             restartButton.topAnchor.constraint(equalTo: stopButton.bottomAnchor, constant: 20 )
         ])
     }
-    
-    @objc func restartButtonTapped(){
-        startTimer()
-    }
-    
+  
     func configureRulesButton(){
         view.addSubview(rulesButton)
         rulesButton.addTarget(self, action: #selector(presentRulesVC), for: .touchUpInside)
@@ -99,5 +100,4 @@ class CardSelectionViewController: UIViewController {
     @objc func presentRulesVC() {
         present(RulesViewController(), animated: true)
     }
-
 }
