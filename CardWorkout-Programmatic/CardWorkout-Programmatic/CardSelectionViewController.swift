@@ -13,11 +13,23 @@ class CardSelectionViewController: UIViewController {
     let stopButton      = CWButton(backgroundColor: .systemRed, title: "Stop!")
     let restartButton   = CWButton(backgroundColor: .systemGreen, title: "Restart")
     let rulesButton     = CWButton(backgroundColor: .systemBlue, title: "Rules")
+    
+    let cards:[UIImage] = CardDeck.AllValues
+    var timer: Timer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configureUI()
+        startTimer()
+    }
+    
+    func startTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(showRandomCards), userInfo: nil, repeats: true)
+    }
+    
+    @objc func showRandomCards(){
+        cardImageView.image = cards.randomElement()
     }
     
     func configureUI(){
@@ -42,6 +54,7 @@ class CardSelectionViewController: UIViewController {
     
     func configureStopButton() {
         view.addSubview(stopButton)
+        stopButton.addTarget(self, action: #selector(stopButtonTapped), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             stopButton.widthAnchor.constraint(equalToConstant: 270),
@@ -51,8 +64,13 @@ class CardSelectionViewController: UIViewController {
         ])
     }
     
+    @objc func stopButtonTapped(){
+        timer.invalidate()
+    }
+    
     func configureRestartButton(){
         view.addSubview(restartButton)
+        restartButton.addTarget(self, action: #selector(restartButtonTapped), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             restartButton.widthAnchor.constraint(equalToConstant: 120),
@@ -60,6 +78,10 @@ class CardSelectionViewController: UIViewController {
             restartButton.leadingAnchor.constraint(equalTo: stopButton.leadingAnchor),
             restartButton.topAnchor.constraint(equalTo: stopButton.bottomAnchor, constant: 20 )
         ])
+    }
+    
+    @objc func restartButtonTapped(){
+        startTimer()
     }
     
     func configureRulesButton(){

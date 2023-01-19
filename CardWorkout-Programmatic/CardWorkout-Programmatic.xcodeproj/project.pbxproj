@@ -14,6 +14,7 @@
 		F37C6A2D29784AA900F24572 /* CardSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C6A2C29784AA900F24572 /* CardSelectionViewController.swift */; };
 		F37C6A2F297856B900F24572 /* CWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C6A2E297856B900F24572 /* CWButton.swift */; };
 		F37C6A312979764800F24572 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C6A302979764800F24572 /* RulesViewController.swift */; };
+		F37C6A3329797FE600F24572 /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C6A3229797FE600F24572 /* CardDeck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F37C6A2C29784AA900F24572 /* CardSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionViewController.swift; sourceTree = "<group>"; };
 		F37C6A2E297856B900F24572 /* CWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWButton.swift; sourceTree = "<group>"; };
 		F37C6A302979764800F24572 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		F37C6A3229797FE600F24572 /* CardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				F37C6A18297846D800F24572 /* AppDelegate.swift */,
 				F37C6A1A297846D800F24572 /* SceneDelegate.swift */,
+				F37C6A3229797FE600F24572 /* CardDeck.swift */,
 				F37C6A2C29784AA900F24572 /* CardSelectionViewController.swift */,
 				F37C6A302979764800F24572 /* RulesViewController.swift */,
 				F37C6A2E297856B900F24572 /* CWButton.swift */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F37C6A3329797FE600F24572 /* CardDeck.swift in Sources */,
 				F37C6A312979764800F24572 /* RulesViewController.swift in Sources */,
 				F37C6A19297846D800F24572 /* AppDelegate.swift in Sources */,
 				F37C6A1B297846D800F24572 /* SceneDelegate.swift in Sources */,
