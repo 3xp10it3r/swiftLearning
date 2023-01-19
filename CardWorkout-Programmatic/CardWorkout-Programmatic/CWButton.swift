@@ -12,34 +12,25 @@ class CWButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configure()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(backgroundColor:UIColor, title: String) {
+    init(color:UIColor, title: String, systemImageName: String) {
         super.init(frame: .zero)
-        setTitle(title, for: .normal)
-        self.backgroundColor = backgroundColor
-        configure()
-    }
-    
-    
-    func configure(){
-        layer.cornerRadius = 8
-        titleLabel?.font = .systemFont(ofSize: 19, weight: .bold)
-        setTitleColor(.white, for: .normal)
+        
+        configuration = .tinted()
+        configuration?.title = title
+        configuration?.image = UIImage(systemName: systemImageName)
+        configuration?.imagePadding = 5
+        configuration?.imagePlacement = .trailing
+        configuration?.baseBackgroundColor = color
+        configuration?.baseForegroundColor = color
+        configuration?.cornerStyle = .medium
         translatesAutoresizingMaskIntoConstraints = false
     }
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    
 
 }
