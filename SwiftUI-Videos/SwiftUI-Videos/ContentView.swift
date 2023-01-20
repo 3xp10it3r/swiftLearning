@@ -31,7 +31,7 @@ struct ContentView: View {
                         Text(video.uploadDate)
                             .font(.subheadline)
                             .foregroundColor(.secondary)
-                            
+                        
                     }
                 }
             }.navigationBarTitle("Digvijay's videos")
