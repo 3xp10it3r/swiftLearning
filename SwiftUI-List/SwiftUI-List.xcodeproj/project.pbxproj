@@ -60,10 +60,10 @@
 				F38CE5D7297A9D61005312AB /* SwiftUI_ListApp.swift */,
 				F38CE5D9297A9D61005312AB /* VideoListView.swift */,
 				F38CE5EB297AB1D0005312AB /* VideoDetailsView.swift */,
+				F38CE5ED297AB6C2005312AB /* StandardButton.swift */,
 				F38CE5E5297A9D79005312AB /* Video.swift */,
 				F38CE5E7297A9E2D005312AB /* Assets.xcassets */,
 				F38CE5DD297A9D65005312AB /* Preview Content */,
-				F38CE5ED297AB6C2005312AB /* StandardButton.swift */,
 			);
 			path = "SwiftUI-List";
 			sourceTree = "<group>";
