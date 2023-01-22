@@ -60,8 +60,6 @@ struct ContentView: View {
                     Button("Save",action: saveUser)
                 }
             }
-            
-            
         }
         .accentColor(.red)
         
